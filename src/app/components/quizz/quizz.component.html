@@ -1,18 +1,18 @@
 <div class="quizz__container">
   <div class="quizz__logo">
     <img src="assets/imgs/logo.png" alt="BuzzFeed Logo">
-    <h3>Title</h3>
+    <h3>{{ title }}</h3>
   </div>
   <div class="quizz__questions">
-    <h3>Selected question</h3>
+    <h3>{{ selectedQuestion.question }}</h3>
   </div>
   <div class="quizz__options">
     <button class="btn-option">
-      option name
+      {{ optionName }}
     </button>
   </div>
-  <div class="quizz__results">
+  <div class="quizz__results" *ngIf=finished>
     <h1>Your result is:</h1>
-    <p>Selected answer</p>
+    <p>{{ selectedAnswer }}</p>
   </div>
 </div>
